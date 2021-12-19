@@ -1,0 +1,69 @@
+/* .content */
+:root {
+  --text-hs: 0deg 0%;
+  --l-0: 0%;
+  --l-40: 40%;
+  --l-80: 80%;
+  --l-100: 100%;
+  font-size: 16px;
+  /*   1rem - 10px */
+  --size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  background: hsl(var(--text-hs) var(--l-100));
+}
+
+.bg {
+  font-size: 20px;
+  --size: 15px;
+}
+
+.content {
+  /* --primary-hs: 187deg 80%; */
+  --_primary-hs: var(--primary-hs, 187deg 80%);
+  border-radius: calc(var(--size) / 2);
+  background: hsl(var(--_primary-hs) var(--l-40));
+  margin: var(--size);
+  /* width: calc(100% - min(50px, 10%)) */
+}
+
+h3 {
+  margin: 0;
+  padding: var(--size);
+  color: hsl(var(--text-hs, 80deg 50%) var(--l-100));
+}
+
+.main {
+  padding: calc(var(--size) * 2) var(--size);
+  color: hsl(var(--text-hs) var(--l-0));
+  background: hsl(var(--_primary-hs) var(--l-80));
+  margin: 0;
+  border-radius: 0 0 calc(var(--size) / 2) calc(var(--size) / 2);
+}
+
+.accent {
+  --primary-hs: 39deg 100%;
+}
+
+.accent:hover {
+  --primary-hs: 42deg 80%;
+}
+
+.cool {
+  --primary-hs: 270deg 50%;
+}
+
+.awesome {
+  --primary-hs: 80deg 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --l-0: 100%;
+    --l-40: 60%;
+    --l-80: 20%;
+    --l-100: 0%;
+  }
+}
